@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:9.11-alpine
 MAINTAINER J33f <jeff@modulaweb.fr>
 
 RUN apk update && apk --no-cache add bash curl python make g++ libc6-compat && yarn global add pm2
