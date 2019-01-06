@@ -18,15 +18,15 @@ Based on latest official node:alpine image, includes :
 plus
 - pm2
 - npm
-- phantomjs
+- puppeteer-core@1.10.0
 
 The default work dir is /var/app
 
 The point of include chromium is to use it with pupeteer. To use pupeteer, proceed like this : 
 
-**Attention:** Use the `pupeteer-core@1.10.0` node module.
+**Attention:** Use the `puppeteer-core@1.10.0` node module.
 ```js
-const pupeteer = require('pupeteer-core'); 
+const pupeteer = require('puppeteer-core'); 
 const browser = await puppeteer.launch({
   headless: true,
   executablePath: process.env.CHROME_BIN || null,
