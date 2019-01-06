@@ -13,7 +13,6 @@ RUN set -x \
 RUN mkdir -p /usr/share && \
     cd /usr/share \
     && curl -L https://github.com/Overbryd/docker-phantomjs-alpine/releases/download/2.11/phantomjs-alpine-x86_64.tar.bz2 | tar xj \
-    && ln -s /usr/share/phantomjs/phantomjs /usr/bin/phantomjs \
-    && npm install puppeteer-core@1.10.0 --silent
+    && ln -s /usr/share/phantomjs/phantomjs /usr/bin/phantomjs
 
 WORKDIR /var/app

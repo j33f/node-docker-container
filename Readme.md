@@ -19,13 +19,14 @@ plus
 - pm2
 - npm
 - phantomjs
-- pupeteer-core
 
 The default work dir is /var/app
 
-_*Tip*_ launch pupeteer like this : 
+The point of include chromium is to use it with pupeteer. To use pupeteer, proceed like this : 
+
+**Attention:** Use the `pupeteer-core@1.10.0` node module.
 ```js
-const pupeteer = require('pupeteer-core');
+const pupeteer = require('pupeteer-core'); 
 const browser = await puppeteer.launch({
   headless: true,
   executablePath: process.env.CHROME_BIN || null,
