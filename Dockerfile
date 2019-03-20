@@ -3,7 +3,7 @@ MAINTAINER J33f <jeff@modulaweb.fr>
 
 ENV CHROME_BIN="/usr/bin/chromium-browser"
 
-ENV UNO_URL https://raw.githubusercontent.com/dagwieers/unoconv/master/unoconv
+ENV UNO_URL="https://raw.githubusercontent.com/dagwieers/unoconv/master/unoconv"
 
 RUN set -x \
     && apk update && apk upgrade && apk --no-cache add --virtual \
