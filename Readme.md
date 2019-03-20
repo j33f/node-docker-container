@@ -19,6 +19,8 @@ plus
 - pm2
 - npm
 - puppeteer-core@1.10.0
+- unoconv
+- libreoffice
 
 The default work dir is /var/app
 
@@ -33,3 +35,5 @@ const browser = await puppeteer.launch({
   args: ['--no-sandbox', '--headless', '--disable-gpu', '--disable-dev-shm-usage']
 });
 ```
+
+The point to include unoconv is to allow to convert office files to pdf.
