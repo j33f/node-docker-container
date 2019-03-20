@@ -18,7 +18,7 @@ RUN set -x \
     ttf-freefont \
     ttf-liberation \
     udev chromium \
-    && yarn global add pm2 && yarn global add npm && yarn global add puppeteer-core@1.10.0
+    && yarn global add pm2 && yarn global add npm && yarn global add puppeteer-core@1.10.0 \
     && curl -Ls $UNO_URL -o /usr/local/bin/unoconv \
     && chmod +x /usr/local/bin/unoconv \
     && ln -s /usr/bin/python3 /usr/bin/python \
