@@ -1,6 +1,6 @@
 # Improved NodeJs image with Pupeteer
 
-Based on latest official node:alpine image, includes : 
+Based on latest official j33f/node-docker-container:latest (latest nodejs/alpine), includes : 
 - ttf-freefont 
 - chromium
 
