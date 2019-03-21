@@ -10,11 +10,12 @@ RUN set -x \
     ttf-droid \
     ttf-dejavu \
     ttf-liberation \
-    msttcorefonts-installer \
     fontconfig
-RUN update-ms-fonts && fc-cache -f
+RUN rm /usr/bin/python && ln -s /usr/bin/python3 /usr/bin/python
+RUN apk --no-cache add msttcorefonts-installer \
+    && update-ms-fonts \
+    && fc-cache -f
 RUN curl -Ls $UNO_URL -o /usr/local/bin/unoconv \
     && chmod +x /usr/local/bin/unoconv
-RUN rm /usr/bin/python && ln -s /usr/bin/python3 /usr/bin/python
 
 WORKDIR /var/app
