@@ -1,4 +1,4 @@
-# NodeJs image with PhantomJs
+# Improved NodeJs image with Pupeteer and Unoconv
 
 Based on latest official node:alpine image, includes : 
 - builds-deps 
@@ -12,28 +12,18 @@ Based on latest official node:alpine image, includes :
 - g++ 
 - libc6-compat
 - udev 
-- ttf-freefont 
-- chromium
+- libreoffice-writer
+- ttf-droid-nonlatin
+- ttf-droid
+- ttf-dejavu
+- ttf-liberation
+- libreoffice
+- unoconv
 
 plus
 - pm2
 - npm
-- puppeteer-core@1.10.0
-- unoconv
-- libreoffice
 
-The default work dir is /var/app
+## Why unoconv
 
-The point of include chromium is to use it with pupeteer. To use pupeteer, proceed like this : 
-
-**Attention:** Use the `puppeteer-core@1.10.0` node module.
-```js
-const pupeteer = require('puppeteer-core'); 
-const browser = await puppeteer.launch({
-  headless: true,
-  executablePath: process.env.CHROME_BIN || null,
-  args: ['--no-sandbox', '--headless', '--disable-gpu', '--disable-dev-shm-usage']
-});
-```
-
-The point to include unoconv is to allow to convert office files to pdf.
+Unoconv allow to convert various documents to various formats (docx to pdf for example)
