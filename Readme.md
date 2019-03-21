@@ -17,9 +17,10 @@ Based on latest official j33f/node-docker-container:latest image (latest nodeJs/
 - ttf-droid
 - ttf-dejavu
 - ttf-liberation
+- ttf-freefont 
+- msttcorefonts-installer
 - libreoffice
 - unoconv
-- ttf-freefont 
 - chromium
 
 plus
