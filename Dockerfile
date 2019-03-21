@@ -8,6 +8,6 @@ RUN set -x \
     builds-deps build-base bash fontconfig curl curl-dev python make \
     g++ libc6-compat \
     udev ttf-freefont chromium \
-    && yarn global add pm2 && yarn global add npm && yarn global add puppeteer-core@1.10.0
+    && yarn global add npm && npm install -g --force --build-from-source pm2 &&  yarn global add puppeteer-core@1.10.0
 
 WORKDIR /var/app
