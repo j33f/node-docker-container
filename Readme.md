@@ -1,4 +1,4 @@
-# NodeJs image with some improvements
+# Latest NodeJs version based on alpine image with some improvements
 
 Based on latest official node:alpine image, includes : 
 - builds-deps 
