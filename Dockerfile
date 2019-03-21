@@ -1,4 +1,4 @@
-FROM j33f/node-docker-container:latest
+FROM j33f/node-docker-container:pupeteer
 MAINTAINER J33f <jeff@modulaweb.fr>
 
 ENV UNO_URL="https://raw.githubusercontent.com/dagwieers/unoconv/master/unoconv"
