@@ -1,4 +1,4 @@
-# NodeJs image with PhantomJs
+# NodeJs image with some improvements
 
 Based on latest official node:alpine image, includes : 
 - builds-deps 
@@ -12,24 +12,15 @@ Based on latest official node:alpine image, includes :
 - g++ 
 - libc6-compat
 - udev 
-- ttf-freefont 
-- chromium
 
 plus
 - pm2
 - npm
-- puppeteer-core@1.10.0
 
 The default work dir is /var/app
 
-The point of include chromium is to use it with pupeteer. To use pupeteer, proceed like this : 
+## Variants
 
-**Attention:** Use the `puppeteer-core@1.10.0` node module.
-```js
-const pupeteer = require('puppeteer-core'); 
-const browser = await puppeteer.launch({
-  headless: true,
-  executablePath: process.env.CHROME_BIN || null,
-  args: ['--no-sandbox', '--headless', '--disable-gpu', '--disable-dev-shm-usage']
-});
-```
+- [j33f/node-docker-container:pupeteer](/j33f/node-docker-container/tree/pupeteer) - includes pupeteer (and chromium)
+- [j33f/node-docker-container:unoconv](/j33f/node-docker-container/tree/unoconv) - includes unoconv (and libreoffice-writer)
+- [j33f/node-docker-container:pupeteer](/j33f/node-docker-container/tree/pupeteer-unoconv) - both pupeteer and unoconv
