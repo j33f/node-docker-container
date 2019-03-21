@@ -23,4 +23,4 @@ The default work dir is /var/app
 
 - [j33f/node-docker-container:pupeteer](/../../tree/pupeteer) - includes pupeteer (and chromium)
 - [j33f/node-docker-container:unoconv](/../../tree/unoconv) - includes unoconv (and libreoffice-writer)
-- [j33f/node-docker-container:pupeteer](/../../tree/pupeteer-unoconv) - both pupeteer and unoconv
+- [j33f/node-docker-container:pupeteer-unoconv](/../../tree/pupeteer-unoconv) - both pupeteer and unoconv
