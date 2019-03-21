@@ -1,17 +1,6 @@
-# NodeJs image with PhantomJs
+# Improved NodeJs image with Pupeteer
 
 Based on latest official node:alpine image, includes : 
-- builds-deps 
-- build-base 
-- bash 
-- fontconfig 
-- curl 
-- curl-dev 
-- python 
-- make 
-- g++ 
-- libc6-compat
-- udev 
 - ttf-freefont 
 - chromium
 
@@ -19,8 +8,6 @@ plus
 - pm2
 - npm
 - puppeteer-core@1.10.0
-
-The default work dir is /var/app
 
 The point of include chromium is to use it with pupeteer. To use pupeteer, proceed like this : 
 
