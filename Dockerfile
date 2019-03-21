@@ -9,7 +9,8 @@ RUN set -x \
     ttf-droid-nonlatin \
     ttf-droid \
     ttf-dejavu \
-    ttf-liberation
+    ttf-liberation \
+    msttcorefonts-installer
 RUN curl -Ls $UNO_URL -o /usr/local/bin/unoconv \
     && chmod +x /usr/local/bin/unoconv
 RUN rm /usr/bin/python && ln -s /usr/bin/python3 /usr/bin/python

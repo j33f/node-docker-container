@@ -17,6 +17,7 @@ Based on latest official node:alpine image, includes :
 - ttf-droid
 - ttf-dejavu
 - ttf-liberation
+- msttcorefonts-installer
 - libreoffice
 - unoconv
 
