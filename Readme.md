@@ -1,10 +1,9 @@
-# Latest NodeJs version based on alpine image with some improvements
+# Latest NodeJs version based on node:lts-alpine image with some improvements
 
 Based on latest official node:alpine image, includes : 
 - builds-deps 
 - build-base 
 - bash 
-- fontconfig 
 - curl 
 - curl-dev 
 - python 
@@ -18,6 +17,10 @@ plus
 - npm
 
 The default work dir is /var/app
+
+pm2 config goes to /var/pm2Config
+
+Start scripts goes to /var/startScripts
 
 ## Variants
 

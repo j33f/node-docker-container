@@ -1,0 +1,14 @@
+{
+  "apps": [{
+    "name"         : "Node-dev-sample",
+    "script"       : "/var/app/app.js",
+    "args"         : [],
+    "watch"        : ["/var/app/app.js"],
+    "watch_options": {
+      "usePolling": true
+    },
+    "node_args"    : "--inspect=0.0.0.0:9229 --max-old-space-size=4000",
+    "kill_timeout" : 15000,
+    "instances"    : 1
+  }]
+}
