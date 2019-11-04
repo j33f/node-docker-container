@@ -16,11 +16,23 @@ plus
 - pm2
 - npm
 
-The default work dir is /var/app
+## volumes
 
-pm2 config goes to /var/pm2Config
+- The default work dir is `/var/app`
 
-Start scripts goes to /var/startScripts
+- pm2 config goes to `/var/pm2Config`
+
+- Start scripts goes to `/var/startScripts`
+
+## How to use
+
+### Default start
+
+Mount your app root to `/var/app`, your app main script should be called `app.js`
+
+### PM2 tweaks
+
+Mount your app root to `/var/app` and your pm2 config file to `/var/pm2Config/config.json`
 
 ## Variants
 
