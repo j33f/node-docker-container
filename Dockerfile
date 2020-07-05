@@ -6,4 +6,4 @@ ENV CHROME_BIN="/usr/bin/chromium-browser"
 RUN set -x \
     && apk update && apk upgrade && apk --no-cache add --virtual \
     udev ttf-freefont chromium \
-    && yarn global add puppeteer-core@1.10.0
+    && yarn global add puppeteer-core

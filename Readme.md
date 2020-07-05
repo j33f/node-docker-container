@@ -7,11 +7,11 @@ Based on latest official j33f/node-docker-container:latest (latest nodejs/alpine
 plus
 - pm2
 - npm
-- puppeteer-core@1.10.0
+- puppeteer-core
 
 The point of include chromium is to use it with pupeteer. To use pupeteer, proceed like this : 
 
-**Attention:** Use the `puppeteer-core@1.10.0` node module.
+**Attention:** Use the `puppeteer-core` node module.
 ```js
 const pupeteer = require('puppeteer-core'); 
 const browser = await puppeteer.launch({
@@ -20,3 +20,6 @@ const browser = await puppeteer.launch({
   args: ['--no-sandbox', '--headless', '--disable-gpu', '--disable-dev-shm-usage']
 });
 ```
+
+## Latest automatic build trigger
+2020/07/05
