@@ -1,0 +1,23 @@
+name: Triger Master version build to Hub
+
+on:
+  schedule:
+    - cron: '0 * * * 0'
+
+jobs:
+  master:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v2
+
+      - name: Put Current Date on Readme.md
+        run: |
+          d=$(date +%F); sed -r "s/[012]{4}[-\/][0-9]{2}[-\/][0-9]{2}/$d/g" ./Readme.md > ./tmp && cat ./tmp > ./Readme.md && rm ./tmp
+
+      - name: Push to master
+      - uses: EndBug/add-and-commit@v7
+        with:
+          message: 'Change last built date'
+          add: 'Readme.md'
+          default_author: github_actions
