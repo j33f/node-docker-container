@@ -36,9 +36,9 @@ Mount your app root to `/var/app` and your pm2 config file to `/var/pm2Config/co
 
 ## Variants
 
-- [j33f/node-docker-container:pupeteer](/../../tree/pupeteer) - includes pupeteer (and chromium)
-- [j33f/node-docker-container:unoconv](/../../tree/unoconv) - includes unoconv (and libreoffice-writer)
-- [j33f/node-docker-container:pupeteer-unoconv](/../../tree/pupeteer-unoconv) - both pupeteer and unoconv
+- [j33f/node-docker-container:pupeteer](https://github.com/j33f/node-docker-container/pupeteer) - includes pupeteer (and chromium)
+- [j33f/node-docker-container:unoconv](https://github.com/j33f/node-docker-container/unoconv) - includes unoconv (and libreoffice-writer)
+- [j33f/node-docker-container:pupeteer-unoconv](https://github.com/j33f/node-docker-container/pupeteer-unoconv) - both pupeteer and unoconv
 
 ## Latest automatic build trigger
 2021-11-12
