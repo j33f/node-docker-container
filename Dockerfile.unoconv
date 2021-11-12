@@ -12,8 +12,6 @@ RUN set -x \
     ttf-liberation \
     fontconfig
 
-RUN rm /usr/bin/python && ln -s /usr/bin/python3 /usr/bin/python
-
 RUN apk --no-cache add msttcorefonts-installer \
     && update-ms-fonts \
     && fc-cache -f
