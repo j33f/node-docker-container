@@ -22,4 +22,4 @@ const browser = await puppeteer.launch({
 ```
 
 ## Latest automatic build trigger
-2020/07/05
+2021-11-12
