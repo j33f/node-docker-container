@@ -55,6 +55,7 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
           repository: j33f/node-docker-container
+          readme-filepath: ./Readme.md
 
   update-pupeteer:
     needs: docker-master
