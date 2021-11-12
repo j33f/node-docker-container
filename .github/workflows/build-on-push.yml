@@ -56,6 +56,7 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
           repository: j33f/node-docker-container
           readme-filepath: ./Readme.md
+          short-description: 'Improved node lts-alpine image with variants including pupeteer and unoconv'
 
   update-pupeteer:
     needs: docker-master
