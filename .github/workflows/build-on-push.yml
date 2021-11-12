@@ -29,6 +29,7 @@ jobs:
           default_author: github_actions
 
   docker-master:
+    needs: update-master
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -56,6 +57,7 @@ jobs:
           repository: j33f/node-docker-container
 
   update-pupeteer:
+    needs: docker-master
     runs-on: ubuntu-latest
     steps:
       - name: Checkout master
@@ -76,6 +78,7 @@ jobs:
           branch: pupeteer
 
   docker-pupeteer:
+    needs: update-pupeteer
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -99,6 +102,7 @@ jobs:
           tags: j33f/node-docker-container:pupeteer
 
   update-unoconv:
+    needs: docker-master
     runs-on: ubuntu-latest
     steps:
       - name: Checkout master
@@ -119,6 +123,7 @@ jobs:
           branch: unoconv
 
   docker-unoconv:
+    needs: update-unoconv
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -142,6 +147,7 @@ jobs:
           tags: j33f/node-docker-container:unoconv
 
   update-pupeteer-unoconv:
+    needs: docker-unoconv
     runs-on: ubuntu-latest
     steps:
       - name: Checkout master
@@ -162,6 +168,7 @@ jobs:
           branch: pupeteer-unoconv
 
   docker-pupeteer-unoconv:
+    needs: update-pupeteer-unoconv
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
