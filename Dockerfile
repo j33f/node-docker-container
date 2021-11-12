@@ -7,7 +7,7 @@ RUN apk update && apk upgrade && apk --no-cache add --virtual \
     udev \
     && yarn global add npm && npm install -g --force --build-from-source pm2
 
-RUN rm /usr/bin/python
+RUN rm /usr/bin/python || true
 RUN ln -s /usr/bin/python3 /usr/bin/python
 
 COPY ./app /var/app
