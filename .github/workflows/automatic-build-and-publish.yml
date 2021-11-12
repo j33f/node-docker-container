@@ -1,4 +1,4 @@
-name: Triger Master version build to Hub
+name: Automatic Build on Push and Schedule
 
 on:
   push:
@@ -9,9 +9,11 @@ on:
       - pupeteer-unoconv
     paths-ignore:
       - 'Readme.md'
+  schedule:
+    - cron: '0 * * * 0'
 
 jobs:
-  update-master:
+  update-readme:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout master
@@ -28,8 +30,8 @@ jobs:
           add: 'Readme.md'
           default_author: github_actions
 
-  docker-master:
-    needs: update-master
+  docker-latest:
+    needs: update-readme
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -59,7 +61,7 @@ jobs:
           short-description: 'Improved node lts-alpine image with variants including pupeteer and unoconv'
 
   docker-pupeteer:
-    needs: docker-master
+    needs: docker-latest
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -82,7 +84,7 @@ jobs:
           tags: j33f/node-docker-container:pupeteer
 
   docker-unoconv:
-    needs: docker-master
+    needs: docker-latest
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
