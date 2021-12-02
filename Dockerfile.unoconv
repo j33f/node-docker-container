@@ -5,6 +5,7 @@ ENV UNO_URL="https://raw.githubusercontent.com/dagwieers/unoconv/master/unoconv"
 
 RUN set -x \
     && apk update && apk upgrade && apk --no-cache add --virtual \
+    libreoffice-common \
     libreoffice-writer \
     ttf-droid-nonlatin \
     ttf-droid \
