@@ -4,6 +4,6 @@ LABEL maintainer="J33f <jeff@modulaweb.fr>"
 ENV CHROME_BIN="/usr/bin/chromium-browser"
 
 RUN set -x \
-    && apk update && apk upgrade && apk --no-cache add --virtual \
-    ttf-freefont chromium \
+    && apk update && apk upgrade && apk --no-cache add --virtual chromium \
+    udev ttf-freefont chromium \
     && yarn global add puppeteer-core
