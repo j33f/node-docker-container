@@ -4,13 +4,15 @@ LABEL maintainer="J33f <jeff@modulaweb.fr>"
 ENV UNO_URL="https://raw.githubusercontent.com/dagwieers/unoconv/master/unoconv"
 
 RUN set -x \
-    && apk update && apk upgrade && apk --no-cache add --virtual \
-    libreoffice-writer \
+    && apk update && apk upgrade
+RUN apk --no-cache add --virtual fonts \
     ttf-droid-nonlatin \
     ttf-droid \
     ttf-dejavu \
     ttf-liberation \
     fontconfig
+
+RUN apk --no-cache add --virtual lo libreoffice-writer
 
 RUN apk --no-cache add msttcorefonts-installer \
     && update-ms-fonts \
