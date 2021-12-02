@@ -3,8 +3,8 @@ LABEL maintainer="J33f <jeff@modulaweb.fr>"
 
 RUN apk update  \
     && apk upgrade  \
-    && apk --no-cache add \
-    builds-deps build-base bash curl curl-dev python3 py3-pip make \
+    && apk --no-cache add --virtual builddeps \
+    build-base bash curl curl-dev python3 py3-pip make \
     g++ libc6-compat \
     udev \
     && yarn global add npm  \
