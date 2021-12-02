@@ -1,7 +1,7 @@
 FROM node:lts-alpine
 LABEL maintainer="J33f <jeff@modulaweb.fr>"
 
-RUN apk update && apk upgrade && apk --no-cache add --virtual builddeps\
+RUN apk update && apk upgrade && apk --no-cache add --virtual builddeps \
     builds-deps build-base bash curl curl-dev python3 py3-pip make \
     g++ libc6-compat \
     udev \
