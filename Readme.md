@@ -30,8 +30,21 @@ puppeteer is a headless chromium driver that aims to pilot a chromium instance f
 - Image name : `j33f/node-docker-container:puppeteer`
 - See [Dockerfile](https://github.com/j33f/node-docker-container/blob/master/Dockerfile.puppeteer).
 - Includes: 
-    - `ttf-freefont chromium` as system dependencies
-    - `puppeteer-core` as global npm dependency
+    - `udev 
+      ttf-freefont 
+      ttf-droid-nonlatin 
+      ttf-droid 
+      ttf-dejavu 
+      ttf-liberation 
+      msttcorefonts \
+      fontconfig 
+      freetype 
+      nss 
+      harfbuzz 
+      ca-certificates 
+      chromium` as system dependencies
+    - `puppeteer@10.2.0` as global npm dependency
+- __Note:__ actual Alpine Chromium version is 93 which correspond to [puppeteer@10.2.0](https://github.com/puppeteer/puppeteer/releases/tag/v10.2.0)
     
 ### With Unoconv
 
@@ -42,7 +55,7 @@ It is useful if you need to generate PDF files from a Docx template.
 - Image name : `j33f/node-docker-container:unoconv`
 - See [Dockerfile](https://github.com/j33f/node-docker-container/blob/master/Dockerfile.unoconv).
 - Includes: 
-    - `unoconv libreoffice-writer ttf-droid-nonlatin ttf-droid ttf-dejavu ttf-liberation fontconfigm` as system dependencies
+    - `unoconv libreoffice-writer freetype ttf-freefont ttf-droid-nonlatin ttf-droid ttf-dejavu ttf-liberation fontconfig msttcorefonts` as system dependencies
 
 ### With both puppeteer and Unoconv
 
