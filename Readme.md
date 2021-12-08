@@ -23,15 +23,15 @@ Mount your app root to `/var/app` and your pm2 config file to `/var/pm2Config/co
 
 ## Variants
 
-### With Pupeteer
+### With puppeteer
 
-Pupeteer is a headless chromium driver that aims to pilot a chromium instance from your node code.
+puppeteer is a headless chromium driver that aims to pilot a chromium instance from your node code.
 
-- Image name : `j33f/node-docker-container:pupeteer`
-- See [Dockerfile](https://github.com/j33f/node-docker-container/blob/master/Dockerfile.pupeteer).
+- Image name : `j33f/node-docker-container:puppeteer`
+- See [Dockerfile](https://github.com/j33f/node-docker-container/blob/master/Dockerfile.puppeteer).
 - Includes: 
     - `ttf-freefont chromium` as system dependencies
-    - `pupeteer-core` as global npm dependency
+    - `puppeteer-core` as global npm dependency
     
 ### With Unoconv
 
@@ -44,10 +44,10 @@ It is useful if you need to generate PDF files from a Docx template.
 - Includes: 
     - `unoconv libreoffice-writer ttf-droid-nonlatin ttf-droid ttf-dejavu ttf-liberation fontconfigm` as system dependencies
 
-### With both Pupeteer and Unoconv
+### With both puppeteer and Unoconv
 
-- Image name : `j33f/node-docker-container:pupeteer-unoconv`
-- See [Dockerfile](https://github.com/j33f/node-docker-container/blob/master/Dockerfile.pupeteer-unoconv).
+- Image name : `j33f/node-docker-container:puppeteer-unoconv`
+- See [Dockerfile](https://github.com/j33f/node-docker-container/blob/master/Dockerfile.puppeteer-unoconv).
 
 ## Latest automatic build trigger
 2021-12-05
