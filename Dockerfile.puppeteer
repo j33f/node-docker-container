@@ -11,6 +11,7 @@ RUN set -x \
     ttf-droid \
     ttf-dejavu \
     ttf-liberation \
+    msttcorefonts-installer \
     fontconfig \
     freetype \
     nss \
