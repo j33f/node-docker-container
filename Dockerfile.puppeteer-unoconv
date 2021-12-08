@@ -12,5 +12,9 @@ RUN set -x \
     nss \
     harfbuzz \
     ca-certificates \
+    dbus \
     chromium \
+    chromium-chromedriver \
     && npm install -g puppeteer@10.2.0
+
+CMD dbus-daemon --system && /var/startScripts/run.sh
