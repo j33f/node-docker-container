@@ -50,4 +50,4 @@ It is useful if you need to generate PDF files from a Docx template.
 - See [Dockerfile](https://github.com/j33f/node-docker-container/blob/master/Dockerfile.puppeteer-unoconv).
 
 ## Latest automatic build trigger
-2021-12-05
+2021-12-08
