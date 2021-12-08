@@ -5,5 +5,9 @@ RUN set -x \
     apk update  \
     && apk upgrade  \
     && apk --no-cache add --virtual chrom \
-    udev ttf-freefont \
-    && npm install -g puppeteer@12.0.1
+    udev \
+    nss \
+    harfbuzz \
+    ca-certificates \
+    chromium \
+    && npm install -g puppeteer@10.2.0

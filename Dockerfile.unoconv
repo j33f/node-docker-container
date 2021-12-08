@@ -7,6 +7,8 @@ RUN set -x \
     && apk update \
     && apk upgrade \
     && apk --no-cache add --virtual office \
+    freetype \
+    ttf-freefont \
     ttf-droid-nonlatin \
     ttf-droid \
     ttf-dejavu \
