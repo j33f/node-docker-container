@@ -17,4 +17,4 @@ RUN set -x \
     chromium-chromedriver \
     && npm install -g puppeteer@10.2.0
 
-CMD dbus-daemon --system && /var/startScripts/run.sh
+CMD rm /var/run/dbus.pid ; dbus-daemon --system && /var/startScripts/run.sh

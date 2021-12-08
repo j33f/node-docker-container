@@ -27,4 +27,4 @@ RUN set -x \
 
 RUN update-ms-fonts && fc-cache -f
 
-CMD dbus-daemon --system && /var/startScripts/run.sh
+CMD rm /var/run/dbus.pid ; dbus-daemon --system && /var/startScripts/run.sh
