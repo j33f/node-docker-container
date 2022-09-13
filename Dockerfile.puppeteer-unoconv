@@ -7,8 +7,7 @@ ENV CHROME_BIN="/usr/bin/chromium-browser" \
 RUN set -x \
     apk update  \
     && apk upgrade  \
-    && apk --no-cache add --virtual chrom \
-    udev \
+    && apk --no-cache add --virtual udev \
     nss \
     harfbuzz \
     ca-certificates \
@@ -17,4 +16,4 @@ RUN set -x \
     chromium-chromedriver \
     && npm install -g puppeteer@10.2.0
 
-CMD rm -f /var/run/dbus.pid || true && dbus-daemon --system && /var/startScripts/run.sh
+CMD /var/startScripts/run.puppeteer.sh

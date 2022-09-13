@@ -7,8 +7,7 @@ ENV CHROME_BIN="/usr/bin/chromium-browser" \
 RUN set -x \
     apk update  \
     && apk upgrade  \
-    && apk --no-cache add --virtual chrom \
-    udev \
+    && apk --no-cache add --virtual udev \
     ttf-freefont \
     ttf-droid-nonlatin \
     ttf-droid \
@@ -27,4 +26,4 @@ RUN set -x \
 
 RUN update-ms-fonts && fc-cache -f
 
-CMD rm -f /var/run/dbus.pid || true && dbus-daemon --system && /var/startScripts/run.sh
+CMD /var/startScripts/run.puppeteer.sh
